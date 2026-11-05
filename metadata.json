@@ -1,0 +1,6 @@
+{
+  "name": "Daftar Hadir Desa Kedungrejo",
+  "description": "Sistem Presensi Mandiri Perangkat Desa dan Buku Tamu Digital Pemerintah Desa Kedungrejo Pakis.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

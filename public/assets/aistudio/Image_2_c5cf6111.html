@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daftar Hadir Desa Kedungrejo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f8f9ff",
+                    "on-surface-variant": "#43474f",
+                    "tertiary": "#1c1f21",
+                    "surface-container": "#e6eeff",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "inverse-primary": "#a7c8ff",
+                    "surface": "#f8f9ff",
+                    "surface-container-high": "#dee9fc",
+                    "tertiary-fixed": "#e1e2e4",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "on-tertiary-container": "#9a9c9e",
+                    "background": "#f8f9ff",
+                    "surface-container-highest": "#d9e3f6",
+                    "outline": "#737780",
+                    "on-background": "#121c2a",
+                    "tertiary-container": "#313436",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-secondary-container": "#003c7b",
+                    "surface-dim": "#d0dbed",
+                    "inverse-surface": "#27313f",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c3c6d1",
+                    "primary-container": "#003366",
+                    "on-surface": "#121c2a",
+                    "on-tertiary-fixed": "#191c1e",
+                    "secondary": "#1b5eaf",
+                    "primary": "#001e40",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "secondary-container": "#74a9ff",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "on-secondary-fixed": "#001b3d",
+                    "surface-tint": "#3a5f94",
+                    "secondary-fixed-dim": "#a9c7ff",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-variant": "#d9e3f6",
+                    "surface-container-low": "#eff4ff",
+                    "on-primary-container": "#799dd6",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#00468c",
+                    "inverse-on-surface": "#eaf1ff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d6e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "touch-target-min": "48px",
+                    "gutter": "16px",
+                    "margin-desktop": "32px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-md": ["Atkinson Hyperlegible Next"],
+                    "headline-md": ["Public Sans"],
+                    "headline-lg-mobile": ["Public Sans"],
+                    "headline-sm": ["Public Sans"],
+                    "body-md": ["Atkinson Hyperlegible Next"],
+                    "headline-lg": ["Public Sans"],
+                    "body-lg": ["Atkinson Hyperlegible Next"],
+                    "label-lg": ["Atkinson Hyperlegible Next"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .step-inactive { opacity: 0.4; pointer-events: none; }
+        .camera-overlay {
+            background: linear-gradient(0deg, rgba(0,30,64,0.4) 0%, rgba(0,0,0,0) 100%);
+        }
+        .scanning-line {
+            height: 2px;
+            background: #a7c8ff;
+            box-shadow: 0 0 15px #a7c8ff;
+            animation: scan 2s infinite ease-in-out;
+        }
+        @keyframes scan {
+            0% { top: 0%; }
+            50% { top: 100%; }
+            100% { top: 0%; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md">
+<!-- Government Header (TopAppBar) -->
+<header class="bg-primary text-on-primary docked full-width top-0 w-full z-50 flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl" data-icon="account_balance">account_balance</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider opacity-90">Pemerintah Desa Kedungrejo Pakis</span>
+<h1 class="font-headline-sm text-headline-sm uppercase tracking-tight font-bold">DAFTAR HADIR DESA</h1>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="p-2 hover:bg-primary-container/20 rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+</button>
+<button class="p-2 hover:bg-primary-container/20 rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop py-8 pb-32">
+<!-- Navigation / Header Section -->
+<div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Presensi Perangkat Desa</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Silakan lengkapi verifikasi wajah dan sidik jari untuk mencatat kehadiran hari ini.</p>
+</div>
+<button class="flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary font-label-lg rounded-xl hover:bg-surface-container-high transition-colors min-h-[48px] w-fit" onclick="window.history.back()">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+                Kembali
+            </button>
+</div>
+<!-- Attendance Flow -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Step 1: Face Scan -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 md:p-8 flex flex-col gap-6 shadow-sm transition-all duration-300" id="step-face">
+<div class="flex items-center gap-4 border-b border-outline-variant pb-4">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xl">1</div>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">Scan Wajah / Ambil Gambar</h3>
+</div>
+<div class="relative w-full aspect-[4/3] bg-surface-dim rounded-xl overflow-hidden border-2 border-dashed border-outline group">
+<!-- Placeholder Camera Image -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-7xl text-outline-variant" data-icon="camera_enhance">camera_enhance</span>
+<p class="font-body-md text-on-surface-variant px-12">Posisikan wajah Anda tepat di tengah bingkai</p>
+</div>
+</div>
+<!-- Decorative Viewfinder Corners -->
+<div class="absolute top-8 left-8 w-12 h-12 border-t-4 border-l-4 border-secondary rounded-tl-lg"></div>
+<div class="absolute top-8 right-8 w-12 h-12 border-t-4 border-r-4 border-secondary rounded-tr-lg"></div>
+<div class="absolute bottom-8 left-8 w-12 h-12 border-b-4 border-l-4 border-secondary rounded-bl-lg"></div>
+<div class="absolute bottom-8 right-8 w-12 h-12 border-b-4 border-r-4 border-secondary rounded-br-lg"></div>
+<!-- Scanning Animation Line -->
+<div class="absolute left-0 right-0 scanning-line z-10"></div>
+<div class="absolute bottom-0 left-0 right-0 camera-overlay h-24 flex items-center justify-center px-6">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md px-4 py-2 rounded-full text-on-surface font-label-md">Kualitas Pencahayaan: Baik</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 px-8 rounded-xl font-label-lg text-lg flex items-center justify-center gap-3 hover:bg-primary-container transition-all active:scale-95 shadow-md" onclick="captureFace()">
+<span class="material-symbols-outlined" data-icon="photo_camera" data-weight="fill">photo_camera</span>
+                    CAPTURE / AMBIL GAMBAR
+                </button>
+</section>
+<!-- Step 2: Fingerprint Scan -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 md:p-8 flex flex-col gap-6 shadow-sm step-inactive transition-all duration-300" id="step-finger">
+<div class="flex items-center gap-4 border-b border-outline-variant pb-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant text-on-surface-variant flex items-center justify-center font-bold text-xl">2</div>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">Sidik Jari</h3>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center gap-8 py-12">
+<div class="relative w-48 h-48 bg-surface-container-high rounded-full flex items-center justify-center border-4 border-outline-variant transition-all hover:border-secondary hover:scale-105 duration-500">
+<span class="material-symbols-outlined text-8xl text-primary transition-colors" data-icon="fingerprint" id="fingerprint-icon">fingerprint</span>
+<!-- Circle Ripple Effect (Hidden by Default) -->
+<div class="absolute inset-0 rounded-full border-4 border-secondary scale-100 opacity-0 transition-all duration-1000" id="ripple"></div>
+</div>
+<div class="text-center space-y-2">
+<p class="font-headline-sm text-headline-sm text-primary uppercase">Scan Sekarang</p>
+<p class="font-body-md text-on-surface-variant max-w-xs">Tempelkan jari telunjuk Anda pada alat pemindai yang tersedia</p>
+</div>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-5 px-8 rounded-xl font-label-lg text-lg flex items-center justify-center gap-3 hover:bg-on-secondary-fixed-variant transition-all active:scale-95 shadow-md" onclick="scanFingerprint()">
+<span class="material-symbols-outlined" data-icon="settings_input_antenna">settings_input_antenna</span>
+                    MULAI SCAN SIDIK JARI
+                </button>
+</section>
+</div>
+<!-- Info Card -->
+<div class="mt-12 bg-primary-container/10 border border-primary-container/20 rounded-xl p-6 flex flex-col md:flex-row items-center gap-6">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-3xl" data-icon="info">info</span>
+</div>
+<div>
+<h4 class="font-label-lg text-primary text-lg">Informasi Penting</h4>
+<p class="font-body-md text-on-surface">Pastikan anda berada di lingkungan kantor desa saat melakukan presensi. Sistem GPS akan mencatat lokasi koordinat Anda secara otomatis bersamaan dengan pengambilan data biometrik ini.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe md:hidden bg-surface-container-lowest border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="event_available" data-weight="fill">event_available</span>
+<span class="font-label-md text-label-md">Daftar Hadir</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="font-label-md text-label-md">Buku Tamu</span>
+</a>
+</nav>
+<!-- Success Modal (Hidden) -->
+<div class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" id="success-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-md w-full p-8 text-center shadow-2xl border border-outline-variant">
+<div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-6xl" data-icon="check_circle" data-weight="fill">check_circle</span>
+</div>
+<h2 class="font-headline-lg text-primary mb-2">Presensi Berhasil</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Data kehadiran Anda telah tercatat pada pukul 08:15 WIB. Terima kasih atas kedisiplinan Anda.</p>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-lg uppercase tracking-wider shadow-lg" onclick="closeModal()">Tutup</button>
+</div>
+</div>
+<script>
+        function captureFace() {
+            const stepFace = document.getElementById('step-face');
+            const stepFinger = document.getElementById('step-finger');
+            
+            // Visual feedback
+            stepFace.classList.add('opacity-60');
+            stepFace.querySelector('button').innerHTML = '<span class="material-symbols-outlined" data-icon="check">check</span> BERHASIL DIAMBIL';
+            stepFace.querySelector('button').classList.replace('bg-primary', 'bg-green-600');
+            
+            // Activate Step 2
+            stepFinger.classList.remove('step-inactive');
+            stepFinger.querySelector('.w-12').classList.replace('bg-outline-variant', 'bg-secondary-container');
+            stepFinger.querySelector('.w-12').classList.replace('text-on-surface-variant', 'text-on-secondary-container');
+            
+            // Scroll to next step on mobile
+            if(window.innerWidth < 1024) {
+                stepFinger.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function scanFingerprint() {
+            const ripple = document.getElementById('ripple');
+            const icon = document.getElementById('fingerprint-icon');
+            
+            // Animation
+            ripple.classList.add('scale-150', 'opacity-50');
+            icon.classList.add('text-secondary');
+            
+            setTimeout(() => {
+                document.getElementById('success-modal').classList.remove('hidden');
+            }, 1200);
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+            window.location.reload();
+        }
+    </script>
+</body></html>

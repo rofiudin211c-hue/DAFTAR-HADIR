@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daftar Hadir Desa Kedungrejo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-scale:active {
+            transform: scale(0.98);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9ff",
+                        "on-surface-variant": "#43474f",
+                        "tertiary": "#1c1f21",
+                        "surface-container": "#e6eeff",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "inverse-primary": "#a7c8ff",
+                        "surface": "#f8f9ff",
+                        "surface-container-high": "#dee9fc",
+                        "tertiary-fixed": "#e1e2e4",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#c5c6c8",
+                        "on-tertiary-container": "#9a9c9e",
+                        "background": "#f8f9ff",
+                        "surface-container-highest": "#d9e3f6",
+                        "outline": "#737780",
+                        "on-background": "#121c2a",
+                        "tertiary-container": "#313436",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#003c7b",
+                        "surface-dim": "#d0dbed",
+                        "inverse-surface": "#27313f",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c3c6d1",
+                        "primary-container": "#003366",
+                        "on-surface": "#121c2a",
+                        "on-tertiary-fixed": "#191c1e",
+                        "secondary": "#1b5eaf",
+                        "primary": "#001e40",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "secondary-container": "#74a9ff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-secondary-fixed": "#001b3d",
+                        "surface-tint": "#3a5f94",
+                        "secondary-fixed-dim": "#a9c7ff",
+                        "on-primary-fixed": "#001b3c",
+                        "surface-variant": "#d9e3f6",
+                        "surface-container-low": "#eff4ff",
+                        "on-primary-container": "#799dd6",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#00468c",
+                        "inverse-on-surface": "#eaf1ff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d6e3ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "touch-target-min": "48px",
+                        "gutter": "16px",
+                        "margin-desktop": "32px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Atkinson Hyperlegible Next"],
+                        "headline-md": ["Public Sans"],
+                        "headline-lg-mobile": ["Public Sans"],
+                        "headline-sm": ["Public Sans"],
+                        "body-md": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Public Sans"],
+                        "body-lg": ["Atkinson Hyperlegible Next"],
+                        "label-lg": ["Atkinson Hyperlegible Next"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-lg": ["16px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-primary dark:bg-primary text-on-primary docked full-width top-0 z-50">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-primary text-3xl" data-icon="account_balance">account_balance</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-primary/80 uppercase">Pemerintah Desa Kedungrejo</span>
+<h1 class="font-headline-sm text-headline-sm text-on-primary uppercase tracking-tight leading-none">DAFTAR HADIR DESA</h1>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-primary hover:bg-primary-container/20 p-2 rounded-full transition-all" data-icon="sync">sync</button>
+<button class="material-symbols-outlined text-on-primary hover:bg-primary-container/20 p-2 rounded-full transition-all" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center relative overflow-hidden px-margin-mobile py-12">
+<!-- Background Decoration (Civic Aesthetic) -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-5">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full filter blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full filter blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="w-full max-w-5xl z-10">
+<!-- Hero Title -->
+<div class="text-center mb-12">
+<p class="font-label-lg text-label-lg text-secondary uppercase tracking-widest mb-2">Pelayanan Publik Digital</p>
+<h2 class="font-headline-lg text-headline-lg md:text-5xl text-on-background mb-4">Sistem Kehadiran Mandiri</h2>
+<div class="h-1 w-24 bg-primary mx-auto rounded-full"></div>
+</div>
+<!-- Bento-style Action Buttons -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+<!-- Attendance Button -->
+<button class="group active-scale flex flex-col items-center justify-between p-8 md:p-12 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm hover:shadow-md hover:border-primary transition-all duration-300 text-left w-full h-full">
+<div class="flex justify-between w-full items-start mb-12">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="face">face</span>
+<span class="material-symbols-outlined text-5xl text-secondary" data-icon="fingerprint">fingerprint</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div class="w-full">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">DAFTAR HADIR PERANGKAT</h3>
+<p class="font-body-md text-on-surface-variant">Khusus untuk seluruh perangkat desa Kedungrejo. Gunakan scan wajah atau sidik jari.</p>
+</div>
+</button>
+<!-- Guest Book Button -->
+<button class="group active-scale flex flex-col items-center justify-between p-8 md:p-12 bg-primary text-on-primary rounded-xl shadow-sm hover:shadow-lg hover:bg-primary-container transition-all duration-300 text-left w-full h-full">
+<div class="flex justify-between w-full items-start mb-12">
+<span class="material-symbols-outlined text-6xl text-on-primary" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined text-on-primary/50 group-hover:text-on-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div class="w-full">
+<h3 class="font-headline-md text-headline-md text-on-primary mb-2 uppercase">BUKU TAMU DIGITAL</h3>
+<p class="font-body-md text-on-primary/80">Pencatatan kunjungan warga dan tamu dinas untuk administrasi kependudukan yang lebih baik.</p>
+</div>
+</button>
+</div>
+<!-- Instructions Section -->
+<div class="max-w-3xl mx-auto border-t border-outline-variant pt-10">
+<div class="flex items-center gap-3 mb-6 justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="info">info</span>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wide">Panduan Penggunaan Kiosk</h4>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold mb-3">1</div>
+<p class="font-body-md text-on-surface-variant">Pilih menu sesuai keperluan Anda pada layar utama.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold mb-3">2</div>
+<p class="font-body-md text-on-surface-variant">Lengkapi data diri atau lakukan verifikasi biometrik.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold mb-3">3</div>
+<p class="font-body-md text-on-surface-variant">Klik simpan dan pastikan muncul konfirmasi berhasil.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary w-full">
+<div class="w-full py-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-label-lg text-label-lg text-on-tertiary">Pemerintah Desa Kedungrejo</span>
+<p class="font-body-md text-on-tertiary-container text-sm">© 2024 Seluruh hak cipta dilindungi.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-md text-label-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Panduan</a>
+<a class="font-label-md text-label-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Lokasi</a>
+<a class="font-label-md text-label-md text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">Kontak</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only Visibility Rule) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe md:hidden bg-surface-container-lowest border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-1 active-scale transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-label-md text-label-md">Daftar Hadir</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors active-scale" href="#">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="font-label-md text-label-md">Buku Tamu</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('touchstart', function() {
+                this.classList.add('scale-95');
+            });
+            button.addEventListener('touchend', function() {
+                this.classList.remove('scale-95');
+            });
+        });
+
+        // Current time update for header (Digital Clock)
+        function updateTime() {
+            const now = new Date();
+            // This could be used for a persistent clock if needed
+        }
+        setInterval(updateTime, 1000);
+    </script>
+</body></html>

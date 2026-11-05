@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buku Tamu Digital - Desa Kedungrejo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f8f9ff",
+                    "on-surface-variant": "#43474f",
+                    "tertiary": "#1c1f21",
+                    "surface-container": "#e6eeff",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "inverse-primary": "#a7c8ff",
+                    "surface": "#f8f9ff",
+                    "surface-container-high": "#dee9fc",
+                    "tertiary-fixed": "#e1e2e4",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "on-tertiary-container": "#9a9c9e",
+                    "background": "#f8f9ff",
+                    "surface-container-highest": "#d9e3f6",
+                    "outline": "#737780",
+                    "on-background": "#121c2a",
+                    "tertiary-container": "#313436",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-secondary-container": "#003c7b",
+                    "surface-dim": "#d0dbed",
+                    "inverse-surface": "#27313f",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c3c6d1",
+                    "primary-container": "#003366",
+                    "on-surface": "#121c2a",
+                    "on-tertiary-fixed": "#191c1e",
+                    "secondary": "#1b5eaf",
+                    "primary": "#001e40",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "secondary-container": "#74a9ff",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "on-secondary-fixed": "#001b3d",
+                    "surface-tint": "#3a5f94",
+                    "secondary-fixed-dim": "#a9c7ff",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-variant": "#d9e3f6",
+                    "surface-container-low": "#eff4ff",
+                    "on-primary-container": "#799dd6",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#00468c",
+                    "inverse-on-surface": "#eaf1ff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d6e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "touch-target-min": "48px",
+                    "gutter": "16px",
+                    "margin-desktop": "32px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-md": ["Atkinson Hyperlegible Next"],
+                    "headline-md": ["Public Sans"],
+                    "headline-lg-mobile": ["Public Sans"],
+                    "headline-sm": ["Public Sans"],
+                    "body-md": ["Atkinson Hyperlegible Next"],
+                    "headline-lg": ["Public Sans"],
+                    "body-lg": ["Atkinson Hyperlegible Next"],
+                    "label-lg": ["Atkinson Hyperlegible Next"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9ff;
+            color: #121c2a;
+        }
+        .bento-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .form-card {
+            border: 1px solid #E5E7EB;
+            transition: all 0.2s ease;
+        }
+        .form-card:focus-within {
+            border-color: #1b5eaf;
+            box-shadow: 0 0 0 1px #1b5eaf;
+        }
+        input::placeholder {
+            color: #9a9c9e;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md text-on-background">
+<!-- TopAppBar Component -->
+<header class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary docked full-width top-0 z-50 flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-primary">account_balance</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-primary uppercase tracking-tight">DAFTAR HADIR DESA</span>
+<span class="font-label-md text-label-md opacity-90">PEMERINTAH DESA KEDUNGREJO</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="hover:bg-primary-container/20 p-2 rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-primary">sync</span>
+</button>
+<button class="hover:bg-primary-container/20 p-2 rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-primary">account_circle</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden md:flex flex-col h-full p-4 bg-surface dark:bg-surface border-r border-outline-variant w-80 sticky top-0">
+<div class="flex items-center gap-4 mb-8 p-2">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, professional circular emblem for a village government in Indonesia, featuring minimalist symbols of rice, cotton, and a central shield. The aesthetic is institutional and corporate, using a palette of deep navy blue and gold accents on a crisp white background, evoking trust and official authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaTXJLu--hagBA5XbSSrn11CK8aJgRsJTWbAvj5wjm2MAuHtJFRCLUcVhB-hHhf-d7vjLqUq0nlhTC80uZ0e46iMvzAMJuUzMl-0mrZGsT_b8vQQkcyE-gUsrl4J8annNVhkcgfe2pECCiU_9vqtXTfUyvaKUsEZBSbDr85f04vSOOG0JJ4q-NUO-fCkBpp2EnpIfIc9-h7lcLQvUAN0JlTSue5vyWmNCc1rscTt-c6LwhIfSU6kWRl4YOIwmtRzjrt6I-yIrweAg"/>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary dark:text-inverse-primary leading-tight">Desa Kedungrejo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Kecamatan Pakis</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="text-on-surface-variant flex items-center gap-4 px-4 py-3 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+<span class="font-label-lg text-label-lg">Daftar Hadir Perangkat</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container flex items-center gap-4 px-4 py-3 rounded-full active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-lg text-label-lg">Buku Tamu Digital</span>
+</a>
+<a class="text-on-surface-variant flex items-center gap-4 px-4 py-3 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">cloud_done</span>
+<span class="font-label-lg text-label-lg">Status Koneksi</span>
+</a>
+<a class="text-on-surface-variant flex items-center gap-4 px-4 py-3 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg text-label-lg">Pengaturan</span>
+</a>
+</nav>
+<button class="mt-auto bg-primary text-on-primary py-4 px-6 rounded-xl font-label-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-98 transition-all">
+<span class="material-symbols-outlined">sync</span>
+                Sinkronisasi Sekarang
+            </button>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-margin-mobile md:p-margin-desktop bg-surface-bright">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Buku Tamu Digital</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Silakan isi data kunjungan Anda untuk keperluan administrasi desa.</p>
+</div>
+<!-- Bento-style Form Layout -->
+<div class="bento-container flex flex-col gap-6">
+<!-- Section 1: Identity -->
+<div class="col-span-12 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-outline-variant space-y-6">
+<div class="space-y-4">
+<label class="block">
+<span class="font-label-lg text-label-lg text-primary block mb-2">Nama Lengkap</span>
+<input class="w-full min-h-[56px] px-4 rounded-lg border border-outline bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-secondary focus:border-secondary transition-all text-body-lg" placeholder="Masukkan nama lengkap sesuai KTP" type="text"/>
+</label>
+<label class="block">
+<span class="font-label-lg text-label-lg text-primary block mb-2">Alamat Lengkap / Instansi</span>
+<textarea class="w-full p-4 rounded-lg border border-outline bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-secondary focus:border-secondary transition-all text-body-lg" placeholder="Contoh: Jl. Merdeka No. 12, RT 01/RW 02 atau Nama Instansi" rows="3"></textarea>
+</label>
+</div>
+</div>
+<!-- Section 2: Verification -->
+<div class="col-span-12 bg-surface-container p-6 md:p-8 rounded-xl border border-outline-variant">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="w-full md:w-1/3 flex flex-col items-center gap-4">
+<div class="w-48 h-64 bg-surface-dim rounded-xl border-2 border-dashed border-outline flex flex-col items-center justify-center text-center p-4 overflow-hidden relative" id="photo-preview-container">
+<div class="flex flex-col items-center" id="placeholder-icon">
+<span class="material-symbols-outlined text-5xl text-outline mb-2">face_retouching_natural</span>
+<p class="text-label-md font-label-md text-outline">Pratinjau Foto</p>
+</div>
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover hidden" id="webcam" playsinline=""></video>
+<canvas class="absolute inset-0 w-full h-full object-cover hidden" id="photo-canvas"></canvas>
+</div>
+</div>
+<div class="w-full md:w-2/3 space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">Verifikasi Kehadiran</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Kami memerlukan foto wajah Anda sebagai bukti fisik kunjungan tamu yang sah.</p>
+<button class="w-full min-h-[64px] bg-secondary text-on-secondary rounded-lg font-label-lg flex items-center justify-center gap-3 hover:opacity-90 active:scale-95 transition-all" id="capture-btn">
+<span class="material-symbols-outlined">photo_camera</span>
+                                    Scan Wajah / Ambil Foto
+                                </button>
+<p class="text-label-md font-label-md text-secondary text-center hidden" id="status-msg">Kamera aktif. Silakan menghadap ke depan.</p>
+</div>
+</div>
+</div>
+<!-- Action Section -->
+<div class="col-span-12 py-4">
+<button class="w-full min-h-[72px] bg-primary-container text-on-primary-container rounded-xl font-headline-sm text-headline-sm flex items-center justify-center gap-3 hover:bg-primary transition-all active:scale-[0.98] shadow-md">
+<span class="material-symbols-outlined">save</span>
+                            SIMPAN DATA KUNJUNGAN
+                        </button>
+<div class="mt-6 flex items-center justify-center gap-2 py-4 bg-tertiary-fixed rounded-lg text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+<span class="font-label-md text-label-md">Data akan tersimpan secara otomatis di Google Sheets</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe md:hidden bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-label-md text-label-md">Daftar Hadir</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-1 active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined">import_contacts</span>
+<span class="font-label-md text-label-md">Buku Tamu</span>
+</a>
+</nav>
+<!-- Footer Component -->
+<footer class="w-full py-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 bg-tertiary dark:bg-tertiary-container text-on-tertiary dark:text-on-tertiary-container">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-label-lg text-label-lg text-on-tertiary">Pemerintah Desa Kedungrejo</span>
+<p class="font-body-md text-body-md opacity-80 mt-1">© 2024 Seluruh hak cipta dilindungi.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-tertiary-container hover:text-on-tertiary font-label-md text-label-md transition-opacity opacity-80 hover:opacity-100" href="#">Hubungi Kami</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary font-label-md text-label-md transition-opacity opacity-80 hover:opacity-100" href="#">Lokasi Kantor</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary font-label-md text-label-md transition-opacity opacity-80 hover:opacity-100" href="#">Panduan</a>
+</div>
+</footer>
+<script>
+        const captureBtn = document.getElementById('capture-btn');
+        const webcam = document.getElementById('webcam');
+        const canvas = document.getElementById('photo-canvas');
+        const placeholderIcon = document.getElementById('placeholder-icon');
+        const statusMsg = document.getElementById('status-msg');
+        let isCameraActive = false;
+
+        captureBtn.addEventListener('click', async () => {
+            if (!isCameraActive) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
+                    webcam.srcObject = stream;
+                    webcam.classList.remove('hidden');
+                    placeholderIcon.classList.add('hidden');
+                    statusMsg.classList.remove('hidden');
+                    captureBtn.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Konfirmasi Foto`;
+                    isCameraActive = true;
+                } catch (err) {
+                    console.error("Error accessing webcam: ", err);
+                    alert("Kamera tidak dapat diakses. Mohon periksa izin browser Anda.");
+                }
+            } else {
+                const context = canvas.getContext('2d');
+                canvas.width = webcam.videoWidth;
+                canvas.height = webcam.videoHeight;
+                context.drawImage(webcam, 0, 0, canvas.width, canvas.height);
+                
+                // Stop camera
+                const stream = webcam.srcObject;
+                const tracks = stream.getTracks();
+                tracks.forEach(track => track.stop());
+                
+                webcam.classList.add('hidden');
+                canvas.classList.remove('hidden');
+                statusMsg.textContent = "Foto berhasil diambil";
+                statusMsg.classList.replace('text-secondary', 'text-green-600');
+                captureBtn.innerHTML = `<span class="material-symbols-outlined">refresh</span> Ambil Ulang Foto`;
+                isCameraActive = false;
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Konfirmasi Kehadiran - DAFTAR HADIR DESA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Atkinson+Hyperlegible+Next:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f8f9ff",
+                    "on-surface-variant": "#43474f",
+                    "tertiary": "#1c1f21",
+                    "surface-container": "#e6eeff",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "inverse-primary": "#a7c8ff",
+                    "surface": "#f8f9ff",
+                    "surface-container-high": "#dee9fc",
+                    "tertiary-fixed": "#e1e2e4",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "on-tertiary-container": "#9a9c9e",
+                    "background": "#f8f9ff",
+                    "surface-container-highest": "#d9e3f6",
+                    "outline": "#737780",
+                    "on-background": "#121c2a",
+                    "tertiary-container": "#313436",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-secondary-container": "#003c7b",
+                    "surface-dim": "#d0dbed",
+                    "inverse-surface": "#27313f",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c3c6d1",
+                    "primary-container": "#003366",
+                    "on-surface": "#121c2a",
+                    "on-tertiary-fixed": "#191c1e",
+                    "secondary": "#1b5eaf",
+                    "primary": "#001e40",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "secondary-container": "#74a9ff",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "on-secondary-fixed": "#001b3d",
+                    "surface-tint": "#3a5f94",
+                    "secondary-fixed-dim": "#a9c7ff",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-variant": "#d9e3f6",
+                    "surface-container-low": "#eff4ff",
+                    "on-primary-container": "#799dd6",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#00468c",
+                    "inverse-on-surface": "#eaf1ff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d6e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "touch-target-min": "48px",
+                    "gutter": "16px",
+                    "margin-desktop": "32px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "label-md": ["Atkinson Hyperlegible Next"],
+                    "headline-md": ["Public Sans"],
+                    "headline-lg-mobile": ["Public Sans"],
+                    "headline-sm": ["Public Sans"],
+                    "body-md": ["Atkinson Hyperlegible Next"],
+                    "headline-lg": ["Public Sans"],
+                    "body-lg": ["Atkinson Hyperlegible Next"],
+                    "label-lg": ["Atkinson Hyperlegible Next"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-lg": ["16px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .success-checkmark-animation {
+            animation: scaleCheck 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+        @keyframes scaleCheck {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .status-pulse {
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-primary text-on-primary flex items-center justify-between px-margin-mobile md:px-margin-desktop py-4 w-full fixed top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-primary" data-icon="account_balance">account_balance</span>
+<h1 class="font-headline-sm text-headline-sm uppercase tracking-tight">DAFTAR HADIR DESA</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-primary-container/20 p-2 rounded-full transition-all duration-150 active:scale-95">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+</button>
+<button class="hover:bg-primary-container/20 p-2 rounded-full transition-all duration-150 active:scale-95">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow pt-24 pb-12 px-margin-mobile md:px-margin-desktop flex flex-col items-center justify-center max-w-4xl mx-auto w-full">
+<!-- Success State Card -->
+<div class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl p-8 md:p-12 text-center relative overflow-hidden">
+<!-- Atmospheric Background Element -->
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<!-- Success Icon -->
+<div class="success-checkmark-animation inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 text-green-600 mb-6 border-4 border-white shadow-sm">
+<span class="material-symbols-outlined !text-5xl" style="font-variation-settings: 'wght' 700;">check_circle</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Berhasil Terkirim!</h2>
+<p class="font-body-lg text-on-surface-variant mb-10">Data kehadiran Anda telah tercatat secara resmi di sistem administrasi desa.</p>
+<!-- Bento Grid Summary Data -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-left">
+<div class="bg-surface p-6 rounded-lg border border-outline-variant flex items-center gap-4">
+<div class="bg-primary-container p-3 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Nama Perangkat</p>
+<p class="font-headline-sm text-on-surface">Bambang Susilo Utomo</p>
+</div>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-outline-variant flex items-center gap-4">
+<div class="bg-primary-container p-3 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Waktu Presensi</p>
+<p class="font-headline-sm text-on-surface">07:42 WIB</p>
+</div>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-outline-variant flex items-center gap-4">
+<div class="bg-primary-container p-3 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Tanggal</p>
+<p class="font-headline-sm text-on-surface">Senin, 24 Mei 2024</p>
+</div>
+</div>
+<div class="bg-surface p-6 rounded-lg border border-outline-variant flex items-center gap-4">
+<div class="bg-primary-container p-3 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="assignment_ind">assignment_ind</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Jabatan</p>
+<p class="font-headline-sm text-on-surface">Sekretaris Desa</p>
+</div>
+</div>
+</div>
+<!-- Connection Status -->
+<div class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-surface-container border border-outline-variant mb-10">
+<div class="w-3 h-3 bg-green-500 rounded-full status-pulse"></div>
+<span class="font-label-md text-on-surface">Terhubung ke Google Sheets (ID: 1k9b5...)</span>
+<span class="material-symbols-outlined text-green-600 !text-lg" data-icon="cloud_done">cloud_done</span>
+</div>
+<!-- Primary Action -->
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a class="bg-primary text-on-primary font-bold px-12 h-14 flex items-center justify-center rounded-lg hover:bg-primary-container transition-colors shadow-sm active:scale-95" href="#">
+                    Kembali ke Menu Utama
+                </a>
+<button class="bg-surface-container text-primary font-bold px-8 h-14 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container-high transition-colors active:scale-95 gap-2">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+                    Cetak Bukti
+                </button>
+</div>
+</div>
+<!-- Decorative Info Section -->
+<section class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+<div class="p-6 bg-white/50 backdrop-blur-sm rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="security">security</span>
+<h3 class="font-label-lg text-primary mb-1">Aman & Terenkripsi</h3>
+<p class="text-sm text-on-surface-variant">Data Anda diamankan menggunakan protokol enkripsi standar pemerintah desa.</p>
+</div>
+<div class="p-6 bg-white/50 backdrop-blur-sm rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="update">update</span>
+<h3 class="font-label-lg text-primary mb-1">Real-time Sync</h3>
+<p class="text-sm text-on-surface-variant">Sistem melakukan sinkronisasi otomatis setiap 5 menit ke server pusat.</p>
+</div>
+<div class="p-6 bg-white/50 backdrop-blur-sm rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="help_outline">help_outline</span>
+<h3 class="font-label-lg text-primary mb-1">Butuh Bantuan?</h3>
+<p class="text-sm text-on-surface-variant">Hubungi tim IT Desa Kedungrejo jika terdapat kesalahan data presensi.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary w-full py-8 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 mt-auto">
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="font-label-lg text-on-tertiary uppercase">Desa Kedungrejo</span>
+<p class="font-body-md text-on-tertiary-container text-center md:text-left">© 2024 Pemerintah Desa Kedungrejo. Seluruh hak cipta dilindungi.</p>
+</div>
+<div class="flex gap-6">
+<a class="font-label-md text-on-tertiary-container hover:text-on-tertiary transition-opacity opacity-80 hover:opacity-100" href="#">Hubungi Kami</a>
+<a class="font-label-md text-on-tertiary-container hover:text-on-tertiary transition-opacity opacity-80 hover:opacity-100" href="#">Lokasi Kantor</a>
+<a class="font-label-md text-on-tertiary-container hover:text-on-tertiary transition-opacity opacity-80 hover:opacity-100" href="#">Panduan Penggunaan</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe bg-surface-container-lowest border-t border-outline-variant md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-label-md">Daftar Hadir</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="font-label-md">Buku Tamu</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button, a').forEach(elem => {
+            elem.addEventListener('mousedown', () => {
+                elem.classList.add('scale-95');
+            });
+            elem.addEventListener('mouseup', () => {
+                elem.classList.remove('scale-95');
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.classList.remove('scale-95');
+            });
+        });
+
+        // Simulating loading state for the print button
+        const printBtn = document.querySelector('button:has(span[data-icon="print"])');
+        if(printBtn) {
+            printBtn.addEventListener('click', () => {
+                const originalText = printBtn.innerHTML;
+                printBtn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="sync">sync</span> Menyiapkan...';
+                printBtn.disabled = true;
+                setTimeout(() => {
+                    printBtn.innerHTML = originalText;
+                    printBtn.disabled = false;
+                    alert('Dokumen bukti kehadiran siap dicetak.');
+                }, 1500);
+            });
+        }
+    </script>
+</body></html>
